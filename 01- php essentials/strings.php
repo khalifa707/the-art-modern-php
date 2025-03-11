@@ -17,8 +17,11 @@
     $name = "John Doe";
     $subject= "PHP";
 
-    $text = "I am " . $name . " and I am studying " . $subject;
+    $text = "I am " . $name .  " and I am studying " . $subject;
     echo $text;
+    echo "\n";
+   echo "\t"; echo $text;
+
 
     ?></pre>
 </body>
