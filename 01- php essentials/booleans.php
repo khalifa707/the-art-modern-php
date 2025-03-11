@@ -30,8 +30,6 @@
     var_dump($age === 30);
     var_dump($age === '30');
 
-
-
     ?></pre>
 
 </body>
