@@ -14,6 +14,9 @@
     var_dump('Hello from a var_dump');
     $message = 'Hello from a var_dump';
     var_dump($message);
+    var_dump(12);
+    var_dump(12.78654);
+
 
     ?></pre>
 
