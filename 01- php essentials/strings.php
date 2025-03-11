@@ -21,9 +21,13 @@
     echo $text;
     echo "\n";
    echo "\t"; echo $text;
+    ?>
+
+    <p><?php echo "My last echo"?></p>
+    <p><?php echo 'My last echo'?></p>
 
 
-    ?></pre>
+</pre>
 </body>
 </html>
 
