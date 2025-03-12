@@ -20,5 +20,11 @@
     if (empty($pageTitle)) {
         echo "It is empty";}
     ?></pre>
+
+<?php
+if (!empty($pageTitle)) {
+    echo "<h1><span>{$pageTitle}</span></h1>";
+}
+?>
 </body>
 </html>
