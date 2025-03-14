@@ -12,13 +12,14 @@
 <pre><?php
 
     $categories = ['programming', 'business', 'technology', 'entertainment'];
+    if (in_array('programming', $categories)) {
+        echo 'Programming exists';
+    }
 
-    var_dump($categories);
-    echo $categories[0] ."</br>";
-    echo $categories[1] ."</br>";
-    echo $categories[3] ."</br>";
-    echo $categories[4] ."</br>";
-
+    var_dump(isset($categories[0])) . "</br>";
+    var_dump(isset($categories[99])) . "</br>";
+    var_dump(empty($categories[99])) . "</br>";
+    var_dump(empty($categories[0])) . "</br>";
 
 
     ?></pre>
