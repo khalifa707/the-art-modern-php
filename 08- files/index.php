@@ -13,11 +13,31 @@
 <main>
     <pre>
         <?php
+        $images = [];  // Initialize the $images array
         $handle = opendir(__DIR__."/images");
 
+        // Read all files in the directory and add image files to the $images array
+        while (($currentFile = readdir($handle)) !== false) {
+            // Skip '.' and '..'
+            if ($currentFile != "." && $currentFile != "..") {
+                // Check if the file is an image (you can adjust the condition as needed)
+                if (in_array(strtolower(pathinfo($currentFile, PATHINFO_EXTENSION)), ['jpg', 'jpeg', 'png', 'gif'])) {
+                    $images[] = $currentFile;  // Add the image to the $images array
+                }
+            }
+        }
+        closedir($handle);
+
+        // Display the image names for debugging
+        var_dump($images);
         ?>
     </pre>
+
+    <?php foreach ($images as $image): ?>
+        <img src="images/<?php echo rawurldecode($image); ?>" alt="Image">
+    <?php endforeach; ?>
 </main>
+
 
 </body>
 </html>
